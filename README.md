@@ -1,12 +1,16 @@
 # cbcparser
+Read and parse TSV/CSV files exported from CBC Machine's **Database**.
 
-Read and parse TSV/CSV files exported from CBC Machines.
+<image src="https://www.human.de/fileadmin/_processed_/csm_16420-30_HumaCount_30TS_with_Logo_right_0500e3075f.png" alt="HumaCount 30TS" style="max-width:600px; width:100%; height:auto;">
+
+Image Source: [Human Diagnostics](https://www.human.de/products/hematology/3-part-system/humacount-30ts/)
+
 
 Written with love in Go.
 
 Suppported Machines:
 
-- Human 30
+- HumaCount 30TS
 - Edan Pro 30
 
 Use cases:
