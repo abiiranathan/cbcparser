@@ -1,0 +1,8 @@
+Sample ID	Date	Time	Patient ID	Birth date	WBC 10^9/l	WBC flag	LYM 10^9/l	LYM flag	MID 10^9/l	MID flag	GRA 10^9/l	GRA flag	LYM% %	LYM% flag	MID% %	MID% flag	GRA% %	GRA% flag	RBC 10^12/l	RBC flag	HGB g/dl	HGB flag	HCT %	HCT flag	MCV fl	MCV flag	MCH pg	MCH flag	MCHC g/dl	MCHC flag	RDWs fl	RDWs flag	RDWc %	RDWc flag	PLT 10^9/l	PLT flag	PCT %	PCT flag	MPV fl	MPV flag	PDWs fl	PDWs flag	PDWc %	PDWc flag	P-LCC 10^9/l	P-LCC flag	P-LCR %	P-LCR flag	Type	Warning	
+AUTO_00000	25/08/2021	14:58		16/08/1993	0.02	L 	0.00	E 	0.00	E 	0.00	E 	0.0	E 	0.0	E 	0.0	E 	0.00	L 	0.0	L 		  	0.0	E 	0.0	E 		  		  		  	8	L 	0.01	L 	6.7	L 	3.4	L 	21.2	L 	0	E 	0.00	E 	Human	lLE	
+AUTO_00002	02/09/2021	12:58		16/08/1993	0.23	L 	0.00	E 	0.00	E 	0.00	E 	0.0	E 	0.0	E 	0.0	E 	0.00	L 	0.0	L 		  	0.0	E 	0.0	E 		  		  		  	8	L 	0.01	L 	8.7	  		  		  	1	E 	13.64	E 	Human	lE	
+0	17/09/2021	13:24		00/00/0000	0.18	  		  		  		  		  		  		  	0.01	  	0.0	  		  		  		  		  		  		  	18	  		  		  		  		  		  		  	Blank		
+AUTO_00003	17/09/2021	13:30		01/05/1968	4.28	L 	2.49	  	0.23	L 	1.56	L 	58.3	H 	5.3	  	36.4	L 	3.49	L 	11.1	L 	33.09	L 	94.8	  	31.9	  	33.7	  	46.4	  	14.2	H 	313	  	0.22	  	7.1	L 	9.0	L 	35.5	L 	61	  	19.59	L 	Human		
+0	17/09/2021	13:36		00/00/0000	0.37	  		  		  		  		  		  		  	0.01	  	0.0	  		  		  		  		  		  		  	20	  		  		  		  		  		  		  	Blank		
+AUTO_00004	17/09/2021	13:40		01/08/1958	4.51	L 	2.46	  	0.40	  	1.66	L 	54.5	H 	8.8	  	36.7	L 	3.87	  	12.3	  	36.31	  	93.9	  	31.9	  	34.0	  	47.4	  	14.4	H 	315	  	0.25	  	7.8	L 	10.0	L 	36.9	L 	76	  	24.11	L 	Human		
+AUTO_00004	17/09/2021	16:50		01/08/1958	0.36	L 	0.12	E 	0.13	E 	0.11	E 	31.8	E 	36.5	E 	31.7	E 	0.01	L 	0.0	L 		  	0.0	E 	0.0	E 		  		  		  	13	L 	0.01	L 	7.6	L 	5.6	L 	27.9	L 	1	E 	8.90	E 	Human	lW	

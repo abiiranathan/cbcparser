@@ -22,3 +22,24 @@ go get github.com/abiiranathan/cbcparser/cbcparser/v1.0.1
 
 Usage:
 See examples for usage.
+
+Run examples:
+
+### Human -  Single report
+
+```bash
+go run examples/human/single/main.go sample_data/human.txt sample_data/normal_ranges.json
+```
+
+### Human - Multiple reports
+
+```bash
+go run examples/human/multi/main.go sample_data/human.txt sample_data/normal_ranges.json
+```
+
+
+### Edan - single report
+
+```bash
+go run examples/edan/single/main.go sample_data/edan.csv sample_data/normal_ranges.json
+```
