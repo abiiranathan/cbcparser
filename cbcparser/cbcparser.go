@@ -57,7 +57,7 @@ type CBCNormalRange struct {
 	MCH        NormalRange `json:"mch"`
 	MCHC       NormalRange `json:"mchc"`
 	RDWs       NormalRange `json:"rdw_s"`
-	RDWc       NormalRange `json:"rds_c"`
+	RDWc       NormalRange `json:"rdw_c"`
 	PLT        NormalRange `json:"plt"`
 	PCT        NormalRange `json:"pct"`
 	MPV        NormalRange `json:"mpv"`

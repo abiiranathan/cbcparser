@@ -25,7 +25,7 @@ type humanCBCResult struct {
 	MCH        cbcparser.CBCValue `json:"mch"`
 	MCHC       cbcparser.CBCValue `json:"mchc"`
 	RDWs       cbcparser.CBCValue `json:"rdw_s"`
-	RDWc       cbcparser.CBCValue `json:"rds_c"`
+	RDWc       cbcparser.CBCValue `json:"rdw_c"`
 	PLT        cbcparser.CBCValue `json:"plt"`
 	PCT        cbcparser.CBCValue `json:"pct"`
 	MPV        cbcparser.CBCValue `json:"mpv"`

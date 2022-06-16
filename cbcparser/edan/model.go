@@ -25,7 +25,7 @@ type edanCBCResult struct {
 	MCV  cbcparser.CBCValue `json:"mcv"`
 	MCH  cbcparser.CBCValue `json:"mch"`
 	MCHC cbcparser.CBCValue `json:"mchc"`
-	RDWc cbcparser.CBCValue `json:"rds_c"`
+	RDWc cbcparser.CBCValue `json:"rdw_c"`
 	RDWs cbcparser.CBCValue `json:"rdw_s"`
 
 	PLT cbcparser.CBCValue `json:"plt"`
