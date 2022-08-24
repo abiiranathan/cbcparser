@@ -40,14 +40,14 @@ func extract_units(value string) string {
 }
 
 func New() cbcparser.CSVParser {
-	return &humanCBCResult{}
+	return &HumanCBCResult{}
 }
 
 func NewMultiParser() cbcparser.CSVMultiParser {
-	return &humanCBCResultMulti{}
+	return &HumanCBCResultMulti{}
 }
 
-func (cbc humanCBCResult) Write(out io.Writer, format cbcparser.OutFormat) error {
+func (cbc HumanCBCResult) Write(out io.Writer, format cbcparser.OutFormat) error {
 	var data []byte
 
 	if format == cbcparser.JSON {
@@ -77,7 +77,7 @@ func (cbc humanCBCResult) Write(out io.Writer, format cbcparser.OutFormat) error
 // The header is expected to be in the following format(with 52 columns):
 //
 // Sample ID	Date	Time	Patient ID	Birth date	WBC 10^9/l	WBC flag	LYM 10^9/l	LYM flag	MID 10^9/l	MID flag	GRA 10^9/l	GRA flag	LYM% %	LYM% flag	MID% %	MID% flag	GRA% %	GRA% flag	RBC 10^12/l	RBC flag	HGB g/dl	HGB flag	HCT %	HCT flag	MCV fl	MCV flag	MCH pg	MCH flag	MCHC g/dl	MCHC flag	RDWs fl	RDWs flag	RDWc %	RDWc flag	PLT 10^9/l	PLT flag	PCT %	PCT flag	MPV fl	MPV flag	PDWs fl	PDWs flag	PDWc %	PDWc flag	P-LCC 10^9/l	P-LCC flag	P-LCR %	P-LCR flag	Type	Warning
-func (cbc humanCBCResult) Parse(r io.Reader, normal_ranges *cbcparser.CBCNormalRange) (cbcparser.CBCWriter, error) {
+func (cbc HumanCBCResult) Parse(r io.Reader, normal_ranges *cbcparser.CBCNormalRange) (cbcparser.CBCWriter, error) {
 	reader := csv.NewReader(r)
 	reader.Comma = separator // ',' or '\t'
 	reader.FieldsPerRecord = nfields
@@ -105,7 +105,7 @@ func (cbc humanCBCResult) Parse(r io.Reader, normal_ranges *cbcparser.CBCNormalR
 }
 
 // MultiParse reads from r and parses the data into an slice of a CBCWriter struct.
-func (humanCBCResultMulti) ParseMulti(r io.Reader, normal_ranges *cbcparser.CBCNormalRange) (cbcparser.CBCMultiWriter, error) {
+func (HumanCBCResultMulti) ParseMulti(r io.Reader, normal_ranges *cbcparser.CBCNormalRange) (cbcparser.CBCMultiWriter, error) {
 	reader := csv.NewReader(r)
 	reader.Comma = separator // ',' or '\t'
 	reader.FieldsPerRecord = nfields
@@ -143,7 +143,7 @@ Index: 49 (Type)
 Index: 50 (Warning)
 */
 func set_cbc_value(headers []string, row []string, normal_ranges *cbcparser.CBCNormalRange) cbcparser.CBCWriter {
-	cbcRes := humanCBCResult{}
+	cbcRes := HumanCBCResult{}
 	// Patient Identifiers
 	cbcRes.SampleID = row[0]
 	cbcRes.Date = row[1]

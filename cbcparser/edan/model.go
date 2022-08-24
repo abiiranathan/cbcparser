@@ -5,7 +5,7 @@ import "github.com/abiiranathan/cbcparser/cbcparser"
 // Sample ID,Mode,Analysis Time,WBC(10^3/��L),LYM#(10^3/��L),LYM%(%),MXD#(),MXD%(),NEUT#(),NEUT%(),RBC(10^6/��L),HGB(g/dL),HCT(%),MCV(fL),MCH(pg),MCHC(g/dL),RDW_CV(%),RDW_SD(fL),PLT(10^3/��L),PDW(fL),MPV(fL),PCT(%),P_LCR(%),P_LCC(10^3/��L)
 // Structure to store data parsed from the text file
 // exported by the Edan Pro30 CBC Machine.
-type edanCBCResult struct {
+type EdanCBCResult struct {
 	SID          string `json:"sid"`
 	Mode         string `json:"mode"`
 	AnalysisTime string `json:"analysis_time"`
@@ -37,4 +37,4 @@ type edanCBCResult struct {
 	PLCR cbcparser.CBCValue `json:"plcr"`
 }
 
-type edanCBCResultMulti []edanCBCResult
+type EdanCBCResultMulti []EdanCBCResult

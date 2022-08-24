@@ -4,7 +4,7 @@ import "github.com/abiiranathan/cbcparser/cbcparser"
 
 // Structure to store data parsed from the text file
 // exported by the HUMAN 30 CBC Machine.
-type humanCBCResult struct {
+type HumanCBCResult struct {
 	SampleID  string `json:"sample_id"`
 	Date      string `json:"date"`
 	Time      string `json:"time"`
@@ -38,4 +38,4 @@ type humanCBCResult struct {
 	Warning string `json:"warning"`
 }
 
-type humanCBCResultMulti []humanCBCResult
+type HumanCBCResultMulti []HumanCBCResult

@@ -42,10 +42,14 @@ func main() {
 		log.Fatalf("parse error: %s\n", err)
 	}
 
-	err = w.Write(os.Stdout, cbcparser.JSON)
-
-	if err != nil {
-		fmt.Println(err)
-		os.Exit(1)
+	if v, ok := w.(edan.EdanCBCResult); ok {
+		fmt.Println(v)
 	}
+
+	// err = w.Write(os.Stdout, cbcparser.JSON)
+
+	// if err != nil {
+	// 	fmt.Println(err)
+	// 	os.Exit(1)
+	// }
 }

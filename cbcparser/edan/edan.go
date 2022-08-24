@@ -63,14 +63,14 @@ func get_flag(value float32, nrange cbcparser.NormalRange) string {
 
 // Initialize a new CSV Parser
 func New() cbcparser.CSVParser {
-	return &edanCBCResult{}
+	return &EdanCBCResult{}
 }
 
 func NewMultiParser() cbcparser.CSVMultiParser {
-	return &edanCBCResultMulti{}
+	return &EdanCBCResultMulti{}
 }
 
-func (cbc edanCBCResult) Write(out io.Writer, format cbcparser.OutFormat) error {
+func (cbc EdanCBCResult) Write(out io.Writer, format cbcparser.OutFormat) error {
 	var data []byte
 
 	if format == cbcparser.JSON {
@@ -98,8 +98,7 @@ func (cbc edanCBCResult) Write(out io.Writer, format cbcparser.OutFormat) error 
 // The first line of the file is expected to be the header.
 //
 // The header is expected to be in the following format(with 24 columns):
-//
-func (cbc edanCBCResult) Parse(r io.Reader, normal_ranges *cbcparser.CBCNormalRange) (cbcparser.CBCWriter, error) {
+func (cbc EdanCBCResult) Parse(r io.Reader, normal_ranges *cbcparser.CBCNormalRange) (cbcparser.CBCWriter, error) {
 	reader := csv.NewReader(r)
 	reader.Comma = separator // ',' or '\t'
 	reader.FieldsPerRecord = nfields
@@ -122,7 +121,7 @@ func (cbc edanCBCResult) Parse(r io.Reader, normal_ranges *cbcparser.CBCNormalRa
 }
 
 // MultiParse reads from r and parses the data into an slice of a CBCWriter struct.
-func (edanCBCResultMulti) ParseMulti(r io.Reader, normal_ranges *cbcparser.CBCNormalRange) (cbcparser.CBCMultiWriter, error) {
+func (EdanCBCResultMulti) ParseMulti(r io.Reader, normal_ranges *cbcparser.CBCNormalRange) (cbcparser.CBCMultiWriter, error) {
 	reader := csv.NewReader(r)
 	reader.Comma = separator // ',' or '\t'
 	reader.FieldsPerRecord = nfields
@@ -156,7 +155,7 @@ Index: 49 (Type)
 Index: 50 (Warning)
 */
 func set_cbc_value(headers []string, row []string, normal_ranges *cbcparser.CBCNormalRange) cbcparser.CBCWriter {
-	cbcRes := edanCBCResult{}
+	cbcRes := EdanCBCResult{}
 	// Patient Identifiers
 	cbcRes.SID = row[0]
 	cbcRes.Mode = row[1]
